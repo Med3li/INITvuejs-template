@@ -101,7 +101,7 @@ gulp.task('pugtohtml', function() {
     //require('./server.js');
     return gulp
         .src('pug js/*.pug')
-        .pipe(pug({pretty: true})) //{pretty:true}: for pretty code
+        .pipe(pug()) //{pretty:true}: for pretty code
         .pipe(gulp.dest('dist'))
         .pipe(notify("HTML task is done!"))
         .pipe(livereload());
