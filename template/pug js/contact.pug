@@ -1,0 +1,13 @@
+include includes/myVars.pug
+include includes/mixins.pug
+doctype
+html
+ head
+  title #{title}
+  |
+  include includes/styles.pug
+  include includes/mapbox-gl.pug
+ body
+ |
+ script(src='js/mapbox-gl.js')
+ include includes/scripts.pug
