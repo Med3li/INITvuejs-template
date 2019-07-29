@@ -13,7 +13,7 @@ Time to time you need to build a triditional multiple page website. But you stil
 6. [Pug js](https://pugjs.org/) : HTML template engine.
 7. [Bootstrap v 3.3.7](https://getbootstrap.com/) : Open source toolkit for developing with HTML, CSS, and JS. 
 8. [Livereload](http://livereload.com/) : A happy land where browsers don't need a Refresh button.
-9. [vuejs]: (http://www.vuejs.org) A JavaScript framework.
+9. [vuejs](http://www.vuejs.org) : A JavaScript framework.
 10. vue-loader, vue-router and more..
 
 # Quick start
