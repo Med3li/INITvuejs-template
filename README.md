@@ -17,7 +17,9 @@ Time to time you need to build a triditional multiple page website. But you stil
 10. vue-loader, vue-router and more..
 
 # Quick start
-1. `npm install -g @vue/cli`
+1. 
+   
+   `npm install -g @vue/cli`
 
 ##### OR
 
