@@ -23,7 +23,10 @@ module.exports = {
 		extra: {
 			type: 'string',
 			message: 'Extra Messaging!'
-		}
-	},
+		},
+		ask: {
+			type: 'string',
+			message: "That's it (Yup/No)? "
+		}},
 	completeMessage: 'Project Complete!'
 };

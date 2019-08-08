@@ -19,11 +19,13 @@ Time to time you need to build a triditional multiple page website. But you stil
 # Quick start
 1.`npm install -g @vue/cli`
 
-##### OR `yarn global add @vue/cli`
+   **OR** 
 
-##### THEN
+run  `yarn global add @vue/cli`
 
-2. vue init Med3li/INITvuejs-template sample-app
+   **THEN**
+
+2. run `vue init Med3li/INITvuejs-template your-project-name`
 
 3. cd into directory sample-app with `cd simple-app`
 

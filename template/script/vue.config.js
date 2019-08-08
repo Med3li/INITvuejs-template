@@ -18,10 +18,11 @@ var navigation = new Router({
   routes: links,
   mode: 'history'
 });
-//Vue.component('vue-', Default);
+//Vue.component('vue-', Default); for global registration.
 new Vue({
   el: '#app',
   router: navigation,
+  //components: {'component-a': ComponentA,},//for local registration
   render: function(h){
     return h(App)
   }
