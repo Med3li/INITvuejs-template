@@ -27,7 +27,7 @@ run  `yarn global add @vue/cli`
 
 2. run `vue init Med3li/INITvuejs-template your-project-name`
 
-3. cd into directory sample-app with `cd simple-app`
+3. cd into directory sample-app with `cd your-project-name`
 
 4. run `npm install` to install all dependencies
 
