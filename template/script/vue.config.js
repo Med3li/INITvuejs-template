@@ -6,7 +6,7 @@ import Github from './components/github.vue'
 import Info from './components/info.vue'
 import Docs from './components/docs.vue'
 import Blog from './components/blog.vue'
-import {store} from './store/stores'
+import {store} from './store/store'
 //import _ from 'lodash';                              //FAILED TO SHARE LODASH WITH ALL COMPONENTS FILE.
 //import window._ from 'lodash';                       //FAILED TO SHARE LODASH WITH ALL COMPONENTS FILE.
 //Object.defineProperty(Vue.prototype,'$_',{value:_ }) //FAILED TO SHARE LODASH WITH ALL COMPONENTS FILE.
@@ -24,11 +24,10 @@ var links = [
   {path:'/github', component: Github},
   {path:'/docs', component: Docs},
   {path:'/blog', component: Blog}
-
 ]
 var navigation = new Router({
   routes: links,
-  mode: 'history'
+  //mode: 'history'
 });
 //Vue.component('vue-', Default); for global registration.
 new Vue({

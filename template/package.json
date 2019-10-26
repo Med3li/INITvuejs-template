@@ -1,23 +1,27 @@
 {
   "name": "initpug",
-  "version": "1.5.2",
+  "version": "1.6.3",
   "main": "index.html",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
+    "chart.js": "^2.8.0",
     "lodash": "^4.17.15",
     "static-server": "^2.2.1",
     "vue": "^2.6.10",
+    "vue-chartjs": "^3.4.2",
     "vuex": "^3.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.6.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.1.0",
     "gulp-livereload": "^4.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-pug": "^4.0.1",
@@ -26,6 +30,7 @@
     "gulp-uglify": "^3.0.2",
     "run-script-os": "^1.0.7",
     "sass-loader": "^7.1.0",
+    "url-loader": "^2.1.0",
     "vue-loader": "^15.7.1",
     "vue-router": "^3.0.7",
     "vue-style-loader": "^4.1.2",
@@ -35,9 +40,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-script-os && gulp && node server.js",
-    "start:win32": "start http://localhost:7200/",
-    "start:darwin": "open http://localhost:7200/",
-    "start:linux": "xdg-open http://localhost:7200/"
+    "start:win32": "start http://localhost:7200",
+    "start:darwin": "open http://localhost:7200",
+    "start:linux": "xdg-open http://localhost:7200"
   },
   "author": "example_user",
   "license": "ISC",

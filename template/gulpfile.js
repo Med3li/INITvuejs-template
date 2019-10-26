@@ -7,8 +7,9 @@ var gulp             = require('gulp'),
     sourcemaps       = require('gulp-sourcemaps'),
     uglify           = require('gulp-uglify'),
     notify           = require('gulp-notify'),
+    imagemin         = require('gulp-imagemin'),
     minify           = require('gulp-clean-css'),
-    webpackMinConfig    = require('./bundle.webpack.mix.js'),
+    webpackMinConfig = require('./bundle.webpack.mix.js'),
     webpackDevConfig = require('./development.webpack.config.js'),
     webpack          = require('webpack-stream');
 
@@ -17,7 +18,7 @@ gulp.task('vue-task', function() {
     return gulp
         .src(['script/vue.config.js'])
         .pipe(webpack(webpackDevConfig))
-        .pipe(gulp.dest('script'))
+        .pipe(gulp.dest('script/bundled files'))
         .pipe(notify("Vue task is done!"))
     });
 //my 14th task
@@ -25,13 +26,13 @@ gulp.task('bundle', function() {
     return gulp
         .src(['script/main.js', 'script/javascript/theme.js'])
         .pipe(webpack(webpackMinConfig))
-        .pipe(gulp.dest('script'))
+        .pipe(gulp.dest('script/bundled files'))
         .pipe(notify("JS-bundle task is done!"))
 });
 //my 13th task
 gulp.task('img-compression', function() {
     return gulp
-        .src('img/*')
+        .src('img/**/*')
         .pipe(imagemin({
              interlaced: true,
              progressive: true,
@@ -76,7 +77,7 @@ gulp.task('js-copy', function() {
    
     // require('./server.js');
     return gulp
-        .src(['script/javascript/*.js','!script/javascript/theme.js']) //extension = js/css/pug
+        .src(['script/javascript/*.js','!script/javascript/theme.js','!script/javascript/map.js']) //extension = js/css/pug
         .pipe(gulp.dest('dist/js'))
         .pipe(notify("js-copy task is done!"));
 });
@@ -101,7 +102,7 @@ gulp.task('pugtohtml', function() {
     //require('./server.js');
     return gulp
         .src('pug js/*.pug')
-        .pipe(pug()) //{pretty:true}: for pretty code
+        .pipe(pug({pretty: true})) //{pretty:true}: for pretty code
         .pipe(gulp.dest('dist'))
         .pipe(notify("HTML task is done!"))
         .pipe(livereload());
@@ -111,7 +112,7 @@ gulp.task('jsminify', function() {
 
     //require('./server.js');
     return gulp
-        .src(['script/bundle.js'])
+        .src(['script/bundled files/bundle.js'])
         .pipe(concat('bundle.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js')) //destribution
@@ -125,11 +126,12 @@ gulp.task('watch', function() {
     gulp.watch('script/**/*.*', gulp.series('vue-task'))
     gulp.watch('script/**/*.*', gulp.series('bundle'))
     gulp.watch('script/**/*.*', gulp.series('jsminify'))
-    gulp.watch('pug js/*.pug', gulp.series('pugtohtml'))
+    gulp.watch('pug js/**/*.pug', gulp.series('pugtohtml'))
     gulp.watch(['style/main.scss', 'style/bootstrap-rtl.css'], gulp.series('create-polyfill-file')) // not used yet
     gulp.watch('style/main.scss', gulp.series('css-copy'))
     gulp.watch('style/main.scss', gulp.series('font-copy'))
     gulp.watch('script/**/*.js', gulp.series('js-copy'))
+    gulp.watch('img/**/*', gulp.series('img-compression'))
     gulp.watch('style/main.scss', gulp.series('sasstocss'));
 });
 //Default task

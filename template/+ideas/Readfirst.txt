@@ -1,0 +1,43 @@
+***complete user task
+
+
+|NEW|***Responsive issue***|ISSUE|
+priority:High
+description:remove compact toggle and checkbox and label ... to topNav components to make main componnets full screen width on toggle sideBar 
+=>main col-xs-12 col-sm-12 col-md-12 col-lg-**12** => -*-12-*-:full screen width
+=>sideBar ul display:none
+|ABOUT|***|THIS|***|ISSUE|
+-first try failed :problem sideBar__list: display none with checkbox:checked impossible
+-
+--------------------------------------
+**use vuex store to dashboard/project
+
+**create admin & user profile component
+ +summary:done!
+ +friends: done!
+ +posts: done!
+ +add post
+  -change picture, name and position on adding post. 
+ +remove post: done!
+ +add comment
+  -change picture, name and position on adding comment. 
+ +remove comment: done!
+ +chat
+ +add a method to member just to log for chating with other members and admin, send files and emails and see other friends profile with adding posts and comments and likes.
+ +add a meethod to admin to access all things and add posts and comments to other admins and users...
+ +write this methods and ideas below:
+**create settings component
+
+**activate and add router
+
+**import image in vue js with webpack: done!
+
+**add a table to each object in friends like this: done!
+
+****components not complete yet****
+-members file
+ +search/ edit /img upload/pagination
+-taskmanager
++ +search/ edit /img upload/pagination/delete/enable add task button like members
+-project details
+ +members modify

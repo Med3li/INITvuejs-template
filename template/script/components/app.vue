@@ -1,5 +1,5 @@
 <template>
-    <div :id="$style.app" :class="$style.app">
+    <div :id="$style.app" :class="$style.app" class="color-scheme">
         <img class="img-responsive" :class="$style.app__img" src="img/INITpug logo.png">
         <h1 :class="$style.app__greeting">{{greeting}}</h1>
         <button :class="$style.app__btn" class="color-scheme__mode-changer">Let me dark</button>

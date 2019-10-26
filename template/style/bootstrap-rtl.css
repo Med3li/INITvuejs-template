@@ -1,3 +1,47 @@
 /*
 start bootstrap-rtl
 */
+.navbar-default .navbar-nav > li > a {
+    color: #777777b5;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+.navbar-default .navbar-nav > li > a:hover{
+	color: cornflowerblue;
+}
+a:hover, a:focus {
+     text-decoration: none;
+}
+.navbar-default{
+	margin-top: 32px;
+    margin-bottom: 18px;
+}
+.panel{margin-top: 40px;
+    }
+th {
+    text-align: left;
+    padding: 17px;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 18px;
+    font-size: 15px;
+}
+.panel{margin-top: 40px;}
+@media (min-width: 768px){
+.form-inline .radio, .form-inline .checkbox {
+    vertical-align: top;
+}}
+form.form-inline {
+}
+.progress{
+    height: 5px;
+}
+.progress-bar{background-color: #7ad835;box-shadow: none;}
+@media (min-width: 768px){
+.form-inline .form-control {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+}

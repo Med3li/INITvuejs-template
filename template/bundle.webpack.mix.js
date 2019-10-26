@@ -4,14 +4,14 @@ var bundleConfig = {
     mode: 'development',
     entry: {
       'bundle.js': [
-            path.resolve(__dirname, './script/build.js'),
+            path.resolve(__dirname, './script/bundled files/build.js'),
             path.resolve(__dirname, './script/main.js'),
-            path.resolve(__dirname, './script/javascript/theme.js')
+            path.resolve(__dirname, './script/javascript/theme.js'),
             ]
     },
     output: {
-        path: path.resolve(__dirname, './script'),
-        publicPath: '/script/',
+        path: path.resolve(__dirname, './script/bundled files'),
+        publicPath: '/script/bundled files',
         filename: '[name]'
     },
     performance: {
@@ -20,7 +20,7 @@ var bundleConfig = {
     optimization: {
         splitChunks: {
             // include all types of chunks
-            chunks: 'all'
+            chunks: 'all',
         }
     },
     target: "node",

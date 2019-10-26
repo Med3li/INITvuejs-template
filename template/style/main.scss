@@ -14,18 +14,21 @@
 @import 'themes/theme';
 /*end theme*/
 /**/
-.warn{
-    background: red;
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
+body{
+	user-select: none;
 }
-.nvisible{
-    display: none;
+::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+    height: 50px;
 }
-.visible{
-    display: block;
+::-webkit-scrollbar {
+    width: 6px;
 }
+//mapbox
+/*.mapbox-map{
+  canvas{
+    height: 550px;
+}}*/
 /*.class{
 *-------;
 *-------;

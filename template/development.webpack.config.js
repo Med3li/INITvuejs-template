@@ -5,8 +5,8 @@ var vueConfig = {
     mode: 'development',
     entry: './script/vue.config.js',
     output: {
-        path: path.resolve(__dirname, './script'),
-        publicPath: '/script/',
+        path: path.resolve(__dirname, './script/bundled files'),
+        publicPath: '/script/bundled files',
         filename: 'build.js'
     },
 
@@ -21,6 +21,7 @@ var vueConfig = {
                 test: /\.js$/,
                 loader: 'babel-loader'
             },
+            
             // this will apply to both plain `.css` files
             // AND `<style>` blocks in `.vue` files
             // webpack.config.js -> module.rules
@@ -34,7 +35,8 @@ var vueConfig = {
                             // enable CSS Modules
                             modules: true,
                             // customize generated class names
-                            localIdentName: '[name]__[local]--[hash:base64:5]'
+                            localIdentName: '[name]__[local]--[hash:base64:5]',
+                            url: true,
                         }
                     }
                 ]
@@ -45,17 +47,28 @@ var vueConfig = {
                     'vue-style-loader',
                     {
                         loader: 'css-loader',
-                        options: { modules: true, }
+                        options: { modules: true, url: true }
                     },
                     'sass-loader'
                 ]
-            }
+            },
+
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'url-loader',
+                options: {
+        name: '[name].[ext]',
+        publicPath: 'img/'
+      },
+                
+            },
         ]
     },
 
     plugins: [
         new Loader()
-    ]};
+    ]
+};
 /*var bundleConfig = {
     mode: 'development',
     entry: {

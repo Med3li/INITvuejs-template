@@ -1,0 +1,26 @@
+++++script/components/++++
+-->main/dashboard/project
+*members.vue,*statistics.vue
+-search
+-pagination
+-details:ellipsis:delete/assign/edit
+*members.vue
+-add member with img upload and preview
+=)))for more details see the design
+
+-->navigation/user/
+*user.vue
+-settings
+-go to chat
+-add friends
+-how to see the others picture in comments
+-add picture in comments
+-map with mapbox gl to each user
+******create (friends/settings/posts) components with vuex store or share data
++++script/components/main/dashboard/analytics
+-text inside the circle in chartjs
+-map with mapbox gl to each user
+
+
+
+**analytics.vue insert a text into circle progess charts
