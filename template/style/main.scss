@@ -1,0 +1,68 @@
+/*! #Primary Sass file */
+
+@charset 'utf-8';
+
+/*start color*/
+@import 'color/colors';
+/*end color*/
+
+/*start typography variables*/
+@import 'base/typography';
+/*end typography variables*/
+
+/*start variables*/
+@import 'helpers/variables';
+/*end variables*/
+
+/*Classes to Extend*/
+
+/*start theme*/
+@import 'themes/theme';
+/*end theme*/
+
+/**/
+body{
+	user-select: none;
+}
+::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+    height: 50px;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+//mapbox
+/*.mapbox-map{
+  canvas{
+    height: 550px;
+}}*/
+/*.class{
+*-------;
+*-------;
+*-------;
+*-------;
+*}
+*%class{
+*-------;
+*-------;
+*-------;
+*}
+
+
+*.class1{
+*@extend %class;
+*-------;
+*-------;
+*-------;
+*font:
+*    family:
+*     size:
+*     weight:
+*}
+*/
+
+/*
+*underscore dash is used for skip --watched in sass and task runner
+*_main.scss
+*@import "main";
+*/

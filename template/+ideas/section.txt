@@ -1,0 +1,66 @@
+//done!  -global components
+//done!  -local components
+//done!  -router
+ //done! -deep paths 
+ //done! -modes difference
+
+/*store vuex 
+        done!    - state for data
+        done!  - getters is a edited state version
+        done!   - mutations is for changing state or getters on event handling / and add the extra value to edit the state just in methods function
+                -actions ??
+        done!   - modules is make a little store to every interest component like store for chat, mailing, user
+        done!   -mapping Its goal is to prevent functions on the script component file from mixing with other function 
+                  in the store just ..mapGet(['increment']) it's easy
+
+state and getters to computed
+
+mutation and actions to methods
+
+*in mutation you can just add a methodsValue in methods not in template
+
+//***********mutation and actions difference************
+ 
+ x=thing from state -
+ -in->mutations:commit
+ -in->actions:dispatch uses for create many edited copies from mutations function
+
+actions add to mutation the getting of payload from function params in template just with replace commit with 'dispatch'
+
+example:
+state{hi:'c'}
+in script methods b='bb'
+mutations
+ f(state, b){
+   state.hi +=b
+ }
+ result==> hi=hibb
+
+actions
+ f(s, b+'cvcv')
+ s.commit('f', b)
+  result==>hi=hibbcvcv
+
+in essence put the origin in mutation and in actions create many changes from this commit
+///modules is good for easy handling and organization of the store
+
+in global use actions for the big large and complex applications.
+////////-in my opinion don't use vuex vuejs store.
+
+
+1-server side rendering nuxtjs
+ nuxt js is a package/plugin/extension for vuejs framework and you can control this with package manager
+ +universal mode:server side rendering(ssr) and client side navigation
+ +single page app: client side navigation
+project name in nuxt must be single word or URL-friendly espace doesn't existe
+2-graphql
+3-i18n is not necessary
+share on github as vuejs template with these information
+
+!!!!!!!!!Don't forget to return the template to its original form while preserving the changes and posting them to github!!!!
+*/
+
+
+
+
+

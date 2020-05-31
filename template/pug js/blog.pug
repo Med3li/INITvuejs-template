@@ -1,0 +1,11 @@
+include includes/myVars.pug
+include includes/mixins.pug
+doctype
+html
+ head
+  title #{title}
+  |
+  include includes/styles.pug
+ body
+  script(src="js/theme.js")
+  include includes/scripts.pug

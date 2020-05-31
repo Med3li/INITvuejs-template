@@ -1,0 +1,16 @@
+*remove all unnecessary imported files,data and components
+
+*count all lines and time
+
+*use localstorage to admin status and theme
+
+*******fix responsive
+=>responsive issues to fix!
+-
+-
+-
+-
+-
+-
+...
+*

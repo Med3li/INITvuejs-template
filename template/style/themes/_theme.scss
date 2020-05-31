@@ -1,0 +1,80 @@
+/* #Default theme */
+/********************EXAMPLE OF WORK WITH THEMES**********/
+/*
+//Structure in HTML
+-BLOCK BLOCK--MODIFIER
+--BLOCK__ELEMENT
+--BLOCK__ELEMENT
+--BLOCK__ELEMENT
+
+//Structure in CSS
+
+//specify for color
+
+//dark theme ==> is the custom theme and it will be used in dark mode
+.BLOCK{
+  &.BLOCK--BLOCK-MODIFIER{
+    & .BLOCK__ELEMENT{
+		color:blue;
+		background-color: silver;
+	}
+	& .BLOCK__ELEMENT{
+		color:red;
+		background-color: silver;
+	}
+}}
+
+//light theme ===> is the default theme and it will be used in light mode
+.BLOCK{
+  &.BLOCK--BLOCK-MODIFIER{
+    & .BLOCK__ELEMENT{
+		color:crimson;
+		background-color: orangered;
+	}
+	& .BLOCK__ELEMENT{
+		color:cornflowerblue;
+		background-color: orangered;
+	}
+}}
+//specify for other property
+.BLOCK{
+	&__ELEMENT,&__ELEMENT,&__ELEMENT{
+		font-size: 30px;
+		margin-left: 30px;
+		margin-top: 50px;
+	}
+    &__ELEMENT{
+    	font-size: 25px;
+    	display: block;
+    }
+}
+*/
+/*
+In essence:I have set these structures to show you how to do a change of mode,
+ all you have to do is work with the dark theme structure only,
+ because the light theme is the original or default theme.
+-Dark theme will be used in dark mode.
+-Light theme will be used in light mode.
+ */
+
+.color-scheme--dark-mode{
+		
+			background: $bg;
+		h1{color:lighten($font-color, 40%)}
+        p{color:lighten($font-color, 25%)}
+        span{color:lighten($font-color, 60%);a{color: #337ab7;}}
+        button{background:lighten($bg, 80%);color: $bg;}
+		
+
+}
+
+
+
+
+
+
+
+
+
+
+

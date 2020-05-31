@@ -1,0 +1,253 @@
+14:31:35-15:42:36=?
+/*!****************************************************************************!*\
+  !*** Project structure ***!
+  \****************************************************************************/
+
+*topnav
+ +logo
+  -home
+ +notifications
+  -notifications/:hash
+ +chat
+  -chat/:hash
+ +user
+  -profile=>admin/:hash
+  -settings => settings/:hash
+  -logout => home
+*sidebar
+ +dashboard
+  -server
+   /navigation
+    /-details
+    /-task manager
+    /-members
+    /-statistics
+  -project
+  -shop
+  -analytics
+ +calender
+ +e-commerce
+  -dashboard
+  -product list 
+  -add new product
+  -orders
+  -invoise
+  -customers
+ +mail
+ +to do
+ +chat
+ +changelog v1.0.0
+ +ui elements
+  -profile
+  -typography
+  -buttons
+  -forms
+  -icons
+  -components
+  -cards
+  -pricing table
+  -timeline
+  -charts
+  -tables
+
+/*!****************************************************************************!*\
+ !*** Project router :theoretical ***!
+\****************************************************************************/
+paths:
+//log
++login
++logout
++forget password
+
+//topnav
+user/:id
+user/:id/settings
+notifications
+notifications/:id
+example:
+ ------------------
+|  notification/5      |
+|--------------------  |
+| all notifications    |
+| in one table with    |
+| scroll overflow auto |
+ ----------------------
+ chat/:id
+//sidebar
++dashboard/project/details
+ dashboard/project/members
+ dashboard/project/task-manager
+ dashboard/project/statistics
++dashboard/analytics
+ dashboard/server
+ dashboard/shop
++ecommerce/orders
+ ecommerce/customers
+ ecommerce/invoise
+ ecommerce/add-new-product
+ +ecommerce/product-list
+
+
+
++ui-elements
+
++todo
++changelog
++mail
++chat
++calender
+
+
+  /*!****************************************************************************!*\
+  !*** Project router :practical ***!
+  \****************************************************************************/
+var links = [
+//topnav
+{
+path:'/home',
+component: home,
+},
+{
+path:'/notifications',
+component: notifications,
+children:[{path:'/:hash',component:'notification'}]
+},
+{
+path:'/chat',
+component: chat,
+children:[{path:'/:hash',component:'chat'}]
+
+},
+{
+path:'/admin',
+component: user,
+chldren:[{path:'/:hash',component:'admin'},{path:'/:hash',component:'settings'},{path:'/logout',component:'login'}]
+
+},
+//sidebar
+//1
+{
+path:'/',
+redirect:'/dashboard'
+component: dashboard,
+children:[{
+path:'/project',
+component: project,
+children:[
+{path"/details",component:"details"},
+{path"/members",component:"members"},
+{path"/statistics",component:"statistics"},
+{path"/task-manager",component:"taskManager"}]
+},
+{path:'/analytics',component: analytics},
+{path:'/server',component: server},
+{path:'/shop',component: shop}]
+},
+//2
+{
+path:'/eCommerce',
+component: eCommerce,
+children:[{
+path:'/customers',
+component: customers},{path:'/orders',component: orders},{path:'/invoise',component: invoise},{path:'/product-list',component: productList},{path:'/add-new-prodct',component: addNewProduct}]
+},
+//3
+{
+path:'/calender',
+component: calender,
+},
+//4
+{
+path:'/todo',
+component: todo,
+},
+//5
+{
+path:'/changelog',
+component: changelog,
+},
+//6
+{
+path:'/mail',
+component: mail,
+},
+//7
+{
+path:'/error-pages',
+component: errorPages,
+},
+//8
+{
+path:'/chat',
+component: chat,
+},
+//9
+{
+path:'/ui-elements',
+component: uiElements,
+children:[
+{path:'/profile',component: profile},
+{path:'/typography',component: typography},
+{path:'/buttons',component: buttons},
+{path:'/forms',component: forms},
+{path:'/icons',component: icons},
+{path:'/components',component: components},
+{path:'/cards',component: cards},
+{path:'/pricing-table',component: pricingTable},
+{path:'/timeline',component: timeline},
+{path:'/charts',component: charts},
+{path:'/tables',component: tables}
+]
+},
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dashboard
+- no home page
+-
+-
+ project 
+ -nav
+  -details
+  -members
+  -statistics
+  -tasks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

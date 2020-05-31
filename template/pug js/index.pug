@@ -1,0 +1,19 @@
+include includes/myVars.pug
+include includes/mixins.pug
+doctype
+html
+ head
+  title #{title}
+  |
+  include includes/styles.pug
+ body.color-scheme.color-scheme--light-mode
+  #app
+   //input(type="text" @keyup.enter="add" v-model="hobby")
+   //button(@click="add") New Hobby
+   //p(v-bind:class="{'warn': counter>3?true:false}" v-bind:style="{color: 'black'}") Hobbies: {{counter}}
+   //p Status: {{warn}}
+   //ul
+   //li(v-for="cpt in hobbies" @click="remove(cpt)") {{cpt.value}}
+   //<hobby-list @remit="remove($event)" v-bind:list="cpt" v-for="cpt in hobbies"></hobby-list>
+  //script(src="https://unpkg.com/vue")
+  include includes/scripts.pug

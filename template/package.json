@@ -1,0 +1,66 @@
+{
+  "name": "INITpug",
+  "version": "2.6.4",
+  "main": "index.html",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "chart.js": "^2.8.0",
+    "lodash": "^4.17.15",
+    "nuxt": "^2.12.2",
+    "static-server": "^2.2.1",
+    "vue": "^2.6.10",
+    "vue-chartjs": "^3.4.2",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "run-script-os": "^1.0.7",
+    "sass-loader": "^7.1.0",
+    "url-loader": "^2.1.0",
+    "vue-loader": "^15.7.1",
+    "vue-router": "^3.0.7",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-stream": "^5.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt",
+    "start": "run-script-os && gulp && node server.js && nuxt",
+    "start:win32": "start http://localhost:7230",
+    "start:darwin": "open http://localhost:7230",
+    "start:linux": "xdg-open http://localhost:7230"
+  },
+  "author": "example_user",
+  "license": "ISC",
+  "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Med3li/INITpug.git"
+  },
+  "keywords": [
+    "front-end",
+    "template",
+    "sites",
+    "web apps"
+  ],
+  "bugs": {
+    "url": "https://github.com/Med3li/INITpug/issues"
+  },
+  "homepage": "https://github.com/Med3li/INITpug#readme"
+}
