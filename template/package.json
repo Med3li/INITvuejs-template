@@ -4,7 +4,7 @@
   "main": "index.html",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "lodash": "^4.17.15",
     "nuxt": "^2.12.2",
     "static-server": "^2.2.1",
